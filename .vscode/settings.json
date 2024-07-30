@@ -1,0 +1,125 @@
+{
+    // Configuracion General para todos los perfiles
+    "workbench.colorTheme": "Thanos : Infinity Dark - Contrast",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.activityBar.location": "top",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.enableExperiments": false,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.statusBar.visible": true,
+    "workbench.sideBar.location": "right",
+    "files.trimFinalNewlines": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "workbench.editor.showTabs": "multiple",
+    "workbench.startupEditor": "none",
+    "window.zoomLevel": 1,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.fontSize": 16,
+    "editor.wordWrap": "on",
+    "gitlens.views.repositories.files.layout": "tree",
+    "breadcrumbs.enabled": true,
+    "breadcrumbs.symbolPath": "last",
+    "workbench.tree.renderIndentGuides": "none",
+    "editor.fontFamily": "Fira Code, Open Sans, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.letterSpacing": 0,
+    "editor.fontWeight": "400",
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+    "editor.autoIndent": "full",
+    "editor.trimAutoWhitespace": true,
+    "editor.lineNumbers": "on",
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.cursorStyle": "line",
+    "editor.cursorBlinking": "expand",
+    "editor.cursorWidth": 2,
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.minimap.enabled": false,
+    "editor.snippetSuggestions": "bottom",
+    "editor.showUnused": true,
+    "editor.tabCompletion": "on",
+    "powermode.enabled": true,
+    "powermode.combo.counterEnabled": "hide",
+    "powermode.combo.timerEnabled": "hide",
+    "explorer.openEditors.visible": 1,
+    "guides.active.width": 2,
+    "vsicons.presets.jsOfficial": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "always"
+    },
+    // configuracion segun la necesidad del proyecto
+    "files.associations": {
+        "*.js": "javascript"
+    },
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "css.styleSheets": [
+        "**/${fileBasenameNoExtension}.css"
+    ],
+    "[css]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "michelemelluso.code-beautifier"
+    },
+    "[scss]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "michelemelluso.code-beautifier"
+    },
+    "[less]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "michelemelluso.code-beautifier"
+    },
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.folders.color": "#007ea7",
+
+    "typescript.updateImportsOnFileMove.enabled": "prompt",
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.preferences.importModuleSpecifier": "shortest",
+    "typescript.suggest.autoImports": true,
+    "typescript.suggest.completeJSDocs": true,
+    "typescript.format.enable": true,
+    "typescript.autoClosingTags": true,
+    "typescript.suggestionActions.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "prompt",
+    "typescript.referencesCodeLens.enabled":true,
+
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "javascript.preferences.quoteStyle": "single",
+    "javascript.preferences.importModuleSpecifier": "shortest",
+    "javascript.suggest.completeJSDocs": true,
+    "javascript.format.enable": true,
+    "javascript.autoClosingTags": true,
+    "javascript.suggestionActions.enabled": true,
+    "javascript.referencesCodeLens.enabled": true,
+    "npm-intellisense.scanDevDependencies": true,
+    "prettier.printWidth": 120,
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    "editor.guides.indentation": false
+}
