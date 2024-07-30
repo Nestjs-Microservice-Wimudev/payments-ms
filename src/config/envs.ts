@@ -3,6 +3,7 @@ import 'dotenv/config';
 import * as joi from 'joi';
 
 interface EnvVars {
+  NATS_SERVERS: string[];
   PORT: number;
   STRIPE_SECRET: string;
   STRIPE_SUCCESS_URL: string;
@@ -11,7 +12,8 @@ interface EnvVars {
 }
 
 const envsSchema = joi
-  .object({
+    .object({
+      NATS_SERVERS: process.env.NATS_SERVERS?.split(','),
       PORT: joi.number().required(),
       STRIPE_SECRET: joi.string().required(),
       STRIPE_SUCCESS_URL: joi.string().required(),
@@ -20,7 +22,10 @@ const envsSchema = joi
   })
   .unknown(true);
 
-const { error, value } = envsSchema.validate(process.env);
+const { error, value } = envsSchema.validate({
+  ...process.env,
+  NATS_SERVERS: process.env.NATS_SERVERS?.split(','),
+});
 
 if (error) {
   throw new Error(`Config validation error: \${error.message}`);
@@ -29,9 +34,10 @@ if (error) {
 const envVars: EnvVars = value;
 
 export const envs = {
+  natsServers: envVars.NATS_SERVERS,
   port: envVars.PORT,
-    stripeSecret: envVars.STRIPE_SECRET,
-    stripeSuccessUrl: envVars.STRIPE_SUCCESS_URL,
-    stripeCancelUrl: envVars.STRIPE_CANCEL_URL,
-    stripeEndpointSecret: envVars.STRIPE_ENDPOINTSECRET,
+  stripeSecret: envVars.STRIPE_SECRET,
+  stripeSuccessUrl: envVars.STRIPE_SUCCESS_URL,
+  stripeCancelUrl: envVars.STRIPE_CANCEL_URL,
+  stripeEndpointSecret: envVars.STRIPE_ENDPOINTSECRET,
 };
