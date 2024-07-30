@@ -12,7 +12,7 @@ async function bootstrap() {
         whitelist: true,
         forbidNonWhitelisted: true,
     }));
-    await app.listen(3000);
+    await app.listen(envs.port);
     
     logger.log(`Payments Microservice running on port ${envs.port}`)
 }
